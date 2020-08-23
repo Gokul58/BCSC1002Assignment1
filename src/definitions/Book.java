@@ -33,6 +33,13 @@ public class Book {
         this.authorName = authorName;
     }
 
+    @Override
+    public String toString() {
+        return String.format(
+                "Book Name: %s, Author Name: %s, ISBN Number: %s",
+                getBookName(), getAuthorName(), getIsbnNumber()
+        );
+    }
 
     public String getIsbnNumber() {
         return isbnNumber;
