@@ -61,4 +61,13 @@ public class Student {
     public void setBookIssued(Book[] bookIssued) {
         this.bookIssued = bookIssued;
     }
+
+    public Student(String studentFirstName, String studentMiddleName, String studentLastName, long univRollNo, int issuedBookNumbers, Book[] bookIssued) {
+        this.studentFirstName = studentFirstName;
+        this.studentMiddleName = studentMiddleName;
+        this.studentLastName = studentLastName;
+        this.univRollNo = univRollNo;
+        this.issuedBookNumbers = issuedBookNumbers;
+        this.bookIssued = bookIssued;
+    }
 }
