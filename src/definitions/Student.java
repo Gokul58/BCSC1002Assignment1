@@ -6,6 +6,8 @@
  * */
 package definitions;
 
+import java.util.Arrays;
+
 public class Student {
     private String studentFirstName;
     private String studentMiddleName;
@@ -13,6 +15,18 @@ public class Student {
     private long univRollNo;
     private int issuedBookNumbers;
     private Book[] bookIssued;
+
+    public Student(String studentFirstName, String studentMiddleName, String studentLastName, long univRollNo, int issuedBookNumbers) {
+        this.studentFirstName = studentFirstName;
+        this.studentMiddleName = studentMiddleName;
+        this.studentLastName = studentLastName;
+        this.univRollNo = univRollNo;
+        this.issuedBookNumbers = issuedBookNumbers;
+    }
+
+    public Student(Book[] bookIssued) {
+        this.bookIssued = bookIssued;
+    }
 
     public String getStudentFirstName() {
         return studentFirstName;
@@ -55,19 +69,17 @@ public class Student {
     }
 
     public Book[] getBookIssued() {
-        return bookIssued;
+        return bookIssued.clone();
     }
 
     public void setBookIssued(Book[] bookIssued) {
         this.bookIssued = bookIssued;
     }
 
-    public Student(String studentFirstName, String studentMiddleName, String studentLastName, long univRollNo, int issuedBookNumbers, Book[] bookIssued) {
-        this.studentFirstName = studentFirstName;
-        this.studentMiddleName = studentMiddleName;
-        this.studentLastName = studentLastName;
-        this.univRollNo = univRollNo;
-        this.issuedBookNumbers = issuedBookNumbers;
-        this.bookIssued = bookIssued;
+    @Override
+    public String toString() {
+        return "Student{" + "studentFirstName='" + studentFirstName + '\'' + ", studentMiddleName='" + studentMiddleName + '\'' + ", studentLastName='" + studentLastName + '\'' + ", univRollNo=" + univRollNo + ", issuedBookNumbers=" + issuedBookNumbers + ", bookIssued=" + Arrays.toString(bookIssued) + '}';
     }
+
+
 }
