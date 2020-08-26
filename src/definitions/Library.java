@@ -14,6 +14,7 @@ public class Library {
      */
     public void addBookName(String name) {
         System.out.println(name + "has been issued for you.");
+
     }
 
     /**
@@ -24,6 +25,16 @@ public class Library {
 
     public void returnPreviousBook(String name) {
         System.out.println("Your book has been returned.");
+    }
+
+    /**
+     * This method helps you to know the name of the books that has been issued by you.
+     *
+     * @param names The names of all the issued books.
+     */
+
+    public void myIssuedBooks(String[] names) {
+        System.out.println("These are the " + names + "of the book that has been issued.");
     }
 
 
