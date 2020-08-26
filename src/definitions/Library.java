@@ -16,5 +16,15 @@ public class Library {
         System.out.println(name + "has been issued for you.");
     }
 
+    /**
+     * This method returns the previously issued book.
+     *
+     * @param name The name of the book you want to be returned.
+     */
+
+    public void returnPreviousBook(String name) {
+        System.out.println("Your book has been returned.");
+    }
+
 
 }
