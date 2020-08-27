@@ -13,6 +13,7 @@ public class Book {
     private String authorName;
     private String isbnNumber;
 
+
     public String getBookName() {
         return bookName;
     }
@@ -25,10 +26,10 @@ public class Book {
         return authorName;
     }
 
-    public Book(String bookName, String authorName, String isbnNumber) {
+    public Book(String bookName) {
         this.bookName = bookName;
-        this.authorName = authorName;
-        this.isbnNumber = isbnNumber;
+        this.authorName = "Unknown";
+        this.isbnNumber = "unknown";
     }
 
     public void setAuthorName(String authorName) {

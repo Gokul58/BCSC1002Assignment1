@@ -1,5 +1,5 @@
 /*  Created by IntelliJ IDEA.
- *  User: Divyansh Bhardwaj (dbc2201)
+ *  User: gokul s kumar
  *  Date: 21/08/20
  *  Time: 3:50 PM
  *  File Name : Library.java
@@ -7,13 +7,24 @@
 package definitions;
 
 public class Library {
+    private Book[] bookIssued;
+
+    public Library() {
+        this.bookIssued = new Book[5];
+        for (int i = 0; i < bookIssued.length; i++) {
+            bookIssued[i] = new Book("Book " + (i + 1));
+
+        }
+    }
+
+
     /**
      * This method helps us to issue a new book.
      *
      * @param name The name of the book you want to issue.
      */
     public void addBookName(String name) {
-        System.out.println(name + "has been issued for you.");
+        System.out.println(name + " has been issued for you.");
 
     }
 
@@ -27,15 +38,10 @@ public class Library {
         System.out.println("Your book has been returned.");
     }
 
-    /**
-     * This method helps you to know the name of the books that has been issued by you.
-     *
-     * @param names The names of all the issued books.
-     */
-
-    public void myIssuedBooks(String[] names) {
-        System.out.println("These are the " + names + "of the book that has been issued.");
+    public void list() {
+        for (Book book : bookIssued) {
+            System.out.println(book);
+        }
     }
-
 
 }
