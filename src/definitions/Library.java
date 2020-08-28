@@ -6,6 +6,8 @@
  * */
 package definitions;
 
+import java.util.Arrays;
+
 public class Library {
     private Book[] bookIssued;
 
@@ -28,6 +30,13 @@ public class Library {
 
     public Library(Book[] bookIssued) {
         this.bookIssued = bookIssued;
+    }
+
+    @Override
+    public String toString() {
+        return "Library{" +
+                "bookIssued=" + Arrays.toString(bookIssued) +
+                '}';
     }
 
     /**
