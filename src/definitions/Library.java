@@ -28,6 +28,21 @@ public class Library {
         this.bookIssued = bookIssued;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
+        Library library = (Library) o;
+        return Arrays.equals(bookIssued, library.bookIssued);
+    }
+
+    @Override
+    public int hashCode() {
+        return Arrays.hashCode(bookIssued);
+    }
+
     public Library(Book[] bookIssued) {
         this.bookIssued = bookIssued;
     }
