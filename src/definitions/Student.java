@@ -109,6 +109,10 @@ public class Student {
         return result;
     }
 
+    /**
+     * This method asks the student details.
+     */
+
     public void studentDetails() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter first name: ");

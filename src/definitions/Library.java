@@ -18,6 +18,14 @@ public class Library {
     }
 
 
+    public Book[] getBookIssued() {
+        return bookIssued;
+    }
+
+    public void setBookIssued(Book[] bookIssued) {
+        this.bookIssued = bookIssued;
+    }
+
     /**
      * This method helps us to issue a new book.
      *
