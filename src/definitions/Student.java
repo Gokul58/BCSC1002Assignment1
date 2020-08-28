@@ -8,6 +8,7 @@ package definitions;
 
 import java.util.Arrays;
 import java.util.Objects;
+import java.util.Scanner;
 
 public class Student {
     private String studentFirstName;
@@ -27,6 +28,10 @@ public class Student {
 
     public Student(Book[] bookIssued) {
         this.bookIssued = bookIssued;
+    }
+
+    public Student() {
+
     }
 
     public String getStudentFirstName() {
@@ -102,5 +107,19 @@ public class Student {
         int result = Objects.hash(studentFirstName, studentMiddleName, studentLastName, univRollNo, issuedBookNumbers);
         result = 31 * result + Arrays.hashCode(bookIssued);
         return result;
+    }
+
+    public void studentDetails() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter first name: ");
+        studentFirstName = scanner.nextLine();
+        System.out.println("Enter middle name: ");
+        studentMiddleName = scanner.nextLine();
+        System.out.println("Enter the last name: ");
+        studentLastName = scanner.nextLine();
+        System.out.println("Enter the university roll number: ");
+        univRollNo = scanner.nextLong();
+        System.out.println("Your full name is: " + studentFirstName + " " + studentMiddleName + " " + studentLastName);
+        System.out.println("Your university roll number is: " + univRollNo);
     }
 }

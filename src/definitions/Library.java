@@ -24,7 +24,7 @@ public class Library {
      * @param name The name of the book you want to issue.
      */
     public void addBookName(String name) {
-        System.out.println(name + " has been issued for you.");
+        System.out.println("The book " + name + " has been issued for you.");
 
     }
 

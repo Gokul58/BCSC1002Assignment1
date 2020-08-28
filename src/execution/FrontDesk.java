@@ -8,6 +8,7 @@ package execution;
 
 
 import definitions.Library;
+import definitions.Student;
 
 import java.util.Scanner;
 
@@ -21,6 +22,7 @@ public class FrontDesk {
         Scanner scanner = new Scanner(System.in);
         int studentInput;
         Library myBook = new Library();
+        Student student = new Student();
         String bookName;
         do {
 
@@ -33,6 +35,8 @@ public class FrontDesk {
             studentInput = scanner.nextInt();
             switch (studentInput) {
                 case ISSUE_NEW_BOOK:
+                    System.out.println("Student Detail: ");
+                    student.studentDetails();
                     System.out.println("Enter the name of the book you want to issue: ");
                     scanner.nextLine();
                     bookName = scanner.nextLine();
