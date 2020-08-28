@@ -26,6 +26,10 @@ public class Library {
         this.bookIssued = bookIssued;
     }
 
+    public Library(Book[] bookIssued) {
+        this.bookIssued = bookIssued;
+    }
+
     /**
      * This method helps us to issue a new book.
      *
